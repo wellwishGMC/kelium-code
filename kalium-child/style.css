@@ -1,0 +1,18 @@
+/*
+Theme Name: Kalium - Child Theme
+Theme URI: https://kaliumtheme.com
+Author: Laborator
+Author URI: https://laborator.co
+Description: Start creating that amazing website that you have always wanted, only with Kalium &mdash; Connect with Laborator on: <a href="https://twitter.com/thelaborator">Twitter X</a> &bull; <a href="https://www.facebook.com/laboratorcreative">Facebook</a> &bull; <a href="https://www.instagram.com/laboratorcreative/">Instagram</a>
+Requires PHP: 7.2
+Version: 1.0
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: kalium
+Text Domain: kalium
+*/
+
+
+.products-archive--sidebar span.select2-selection__clear {
+right:20px;
+}
