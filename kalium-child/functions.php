@@ -33,9 +33,9 @@ function kalium_child_wp_enqueue_scripts() {
 	wp_enqueue_style('kalium-swiper-css', get_stylesheet_directory_uri() . '/assets/css/swiper.css');
 
 	// Enqueue the main theme script with dependencies.
-	wp_enqueue_script('kalium-main-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), null, true);
+	wp_enqueue_script('kalium-swiper-js', get_stylesheet_directory_uri() . '/assets/js/swiper.js', array( 'jquery' ));
 
-	wp_enqueue_script('kalium-swiper-js', get_stylesheet_directory_uri() . '/assets/js/swiper.js', array( 'jquery' ), null, true);
+	wp_enqueue_script('custom-main-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ));
 
 }
 
