@@ -42,9 +42,11 @@
 
 
 .main-hero-section .slide-row {
-	min-height: 947px;
+	min-height: 938px;
     display: flex;
     align-items: center;
+    margin: 0;
+	border-bottom: 2px solid #3F3F3F;
 }
 
 .main-hero-section .slide-row .wpb_wrapper {

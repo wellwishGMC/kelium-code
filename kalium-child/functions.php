@@ -30,6 +30,8 @@ function kalium_child_wp_enqueue_scripts() {
 
 	wp_enqueue_style('kalium-main-css', get_stylesheet_directory_uri() . '/assets/css/custom.css');
 
+	wp_enqueue_style('kalium-main-css-1', get_stylesheet_directory_uri() . '/assets/css/custom-1.css');
+
 	wp_enqueue_style('kalium-swiper-css', get_stylesheet_directory_uri() . '/assets/css/swiper.css');
 
 	// Enqueue the main theme script with dependencies.
