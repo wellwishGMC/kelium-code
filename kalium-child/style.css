@@ -11,8 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Template: kalium
 Text Domain: kalium
 */
-
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 .products-archive--sidebar span.select2-selection__clear {
 right:20px;
 }
