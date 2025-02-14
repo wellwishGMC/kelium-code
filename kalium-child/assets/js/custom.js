@@ -31,5 +31,31 @@
             });
 
         }
+
+        var swiper = new Swiper(".prd-category-cards-slider", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            speed: 500,
+              autoplay: {
+                  delay: 3000,
+              },
+              loop: true,
+            breakpoints: {
+              680: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1100: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1350: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+            },
+          });
+
+          
     }); // Ready Ends
 })(jQuery);
