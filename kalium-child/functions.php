@@ -96,3 +96,53 @@ function prd_category_cards_slider_shortcode() {
 add_shortcode('prd_category_slider', 'prd_category_cards_slider_shortcode');
 
 
+
+// Hook into WooCommerce after the main content
+function custom_html_at_end_of_shop_page() {
+    if (is_shop() || is_product_category()) {
+        ?>
+         <div class="custom-section-wrapper">
+			 <div class="section-container">
+				 <div class="external-links-wrapper">
+					 <a href="#" class="btn-class">servizio clienti</a>
+					 <a href="#" class="btn-class">whatsapp</a>
+					 <a href="#" class="btn-class">recensioni</a>
+				 </div>
+			 </div>
+        </div>
+        <?php
+    }
+}
+add_action('woocommerce_after_main_content', 'custom_html_at_end_of_shop_page', 20);
+
+// Hook into WooCommerce before the main content (at the start of the page)
+function custom_html_at_start_of_shop_page() {
+    if (is_product_category()) {
+        $term = get_queried_object();
+        $category_title = single_term_title('', false);
+        $category_subtitle = get_field('category_subtitle', 'product_cat_' . $term->term_id);
+        echo '<div class="custom-cate-main">';
+        echo '<div class="custom-category-header">';
+        echo '<h1 class="cate-heading">' . esc_html($category_title) . '</h1>'; 
+        if ($category_subtitle) {
+            echo '<h3 class="cate-subtitle">' . esc_html($category_subtitle) . '</h3>';
+        }
+        echo '</div>';
+        echo '</div>';
+		
+    }
+}
+add_action('woocommerce_before_main_content', 'custom_html_at_start_of_shop_page', 10);
+
+function html_at_start_of_shop_page() {
+    if (is_shop()) { // Ensures it's only the Shop page
+        echo '<div class="custom-cate-main">';
+        echo '<div class="custom-category-header">';
+        echo '<h1 class="cate-heading">' . esc_html(get_the_title(get_option('woocommerce_shop_page_id'))) . '</h1>'; 
+        echo '</div>';
+        echo '</div>';
+    }
+}
+add_action('woocommerce_before_main_content', 'html_at_start_of_shop_page', 10);
+
+

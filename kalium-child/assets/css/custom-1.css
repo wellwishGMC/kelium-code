@@ -368,7 +368,7 @@ body:has(#wpadminbar) .site-header.main-header{
     background: rgb(255 255 255 / 90%);
     width: 100%;
     font-family: "Italiana", serif;
-    font-size: 50px;
+    font-size: 40px;
     transform: translatey(100%);
     transition: 0.3s all;
 }
@@ -388,10 +388,44 @@ body:has(#wpadminbar) .site-header.main-header{
     position: static;
 }
 
+.widget_layered_nav .widgettitle{
+    display: none !important;
+}
+
+.custom-section-wrapper{
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 15px 0;
+}
+.custom-section-wrapper .section-container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.custom-section-wrapper .section-container .external-links-wrapper{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.custom-section-wrapper .external-links-wrapper .btn-class{
+    flex: 1;
+    min-width: 200px;
+    font-weight: 600;
+    background: #F9F4EB;
+    transition: 0.3s all;
+}
+.custom-section-wrapper .external-links-wrapper .btn-class:hover{
+    background: var(--black-color);
+    color: white !important
+}
+
 @media (max-width: 1300px) {
 	.site-header .header-block__row .header-block__logo{
 		left: 0
 	}
+	.custom-section-wrapper .section-container .external-links-wrapper{
+    	gap: 20px;
+   }
 }
 @media (max-width: 1100px) {
     .header-block__row--secondary .header-block__column ul.menu li{
@@ -416,6 +450,7 @@ body:has(#wpadminbar) .site-header.main-header{
 		transform: translatey(0);
 		font-size: 32px
 	}
+	
 }
 @media (min-width: 768px) {
    .site-header .header-search-input .search-field{
@@ -450,6 +485,9 @@ body:has(#wpadminbar) .site-header.main-header{
     }
 }
 @media (max-width: 767px) {
+	footer.site-footer{
+		margin-top: 50px !important;
+	}
 	.header-search-input .search-icon{
 		display: none
 	}
@@ -465,6 +503,18 @@ body:has(#wpadminbar) .site-header.main-header{
 	}
 	.prd-catgeory-main-wrapper .prd-catgeory-header h2{
 		font-size: 60px;
+	}
+	.custom-section-wrapper{
+		padding: 60px 15px 0;
+	}
+	.woocommerce-page .site-main .products-archive{
+		flex-direction: column
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--products{
+		width: 100%;
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar{
+		width: 100%;
 	}
 }
 

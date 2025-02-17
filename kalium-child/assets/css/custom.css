@@ -159,8 +159,8 @@ a.btn-class.filled-button:hover {
 }
 
 .image-content-section .content-column {
-	border-bottom: 2px solid #3F3F3F;
-	border-top: 2px solid #3F3F3F;
+	/* border-bottom: 2px solid #3F3F3F;
+	border-top: 2px solid #3F3F3F; */
 	width: 50.8%;
 	display: flex;
 	align-items: center;
@@ -323,12 +323,648 @@ font-family: "Raleway" , serif;
 	object-fit: contain;	
 }
 
+.image-content-section{
+    border-bottom: 2px solid #42413F;
+    border-top: 2px solid #42413F;
+}
+
 .image-content-section .content-column .vc_column-inner {
 	max-width: 905px;
 	margin-left: 0;
 	margin-right: auto;
 }
 
+/* .single-products-section .products-loop {
+	overflow: visible;
+} */
+
+/* .parent--single-products-section::after {
+	content: '';
+	width: 100px;
+	height: 100%;
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1
+} */
+
+.single-products-section ul.products  {
+	padding: 0 !important;
+	margin: 0;
+	height: 100% !important;
+	padding-bottom: 46px !important;
+}
+
+.parent--single-products-section {
+	padding: 60px 15px;
+}
+
+.single-products-section .main-heading h2 {
+	font-size: 80px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Italiana";
+    margin: 0;
+    text-align: center;
+	padding-bottom: 20px
+}
+
+.parent--single-products-section {
+	overflow: hidden;
+}
+
+.single-products-section .wpb_column.vc_column_container {
+	max-width: 1250px;
+	margin: 0 auto !important;
+	float: unset !important;
+}
+
+.single-products-section ul.products li {
+	padding: 0 !important;
+	position: static !important;
+	height: auto;
+	margin-bottom: 0 !important;
+}
+
+.single-products-section ul.products li .product-images {
+	border: 2px solid #000000;
+	margin-bottom: 28px;
+}
+
+.single-products-section ul.products li .product-images .image-placeholder {
+	padding-bottom: 120% !important;
+	background: #FFFFFF !important
+}
+
+.single-products-section ul.products li .product-images .image-placeholder img {
+	object-fit: contain
+}
+
+.single-products-section .slider-controlls .slider-pagination {
+	top: auto;
+	bottom: 5px;
+	height: 1.5px;
+	background-color: #000;
+	max-width: calc(100% - 100px);
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.single-products-section .slider-controlls .slider-pagination .swiper-pagination-progressbar-fill {
+	height: 5px;
+	top: -2px;
+	background-color: #000
+}
+
+.single-products-section .slider-controlls .slider-nav-btn  {
+	color: #000;
+	z-index: 2 !important;
+	opacity: 1;
+}
+
+.single-products-section .slider-controlls .slider-nav-btn.swiper-button-next {
+	right: calc(50% - 100vw)
+}
+
+.single-products-section .slider-controlls .slider-nav-btn::after {
+	font-size: 134px;
+	font-weight: 300;
+}
+
+.single-products-section .addonify-qvm-button {
+	display: none !important;
+}
+
+.single-products-section .woocommerce .products .product.catalog-layout-default.hover .item-info .add-to-cart-and-product-categories.show-add-to-cart .product-terms, 
+.single-products-section .woocommerce .products .product.catalog-layout-default:hover .item-info .add-to-cart-and-product-categories.show-add-to-cart .product-terms{
+	visibility: visible !important;
+/* 	position: static !important; */
+	opacity: 1 !important;
+}
+.single-products-section .woocommerce .products .product .item-info .item-info-row>.price-column .woocommerce-Price-amount{
+    font-family: "Raleway", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.single-products-section .woocommerce .products .product .item-info .add_to_cart_button{
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 10px;
+    color: black;
+}
+.single-products-section .woocommerce .products .product .item-info .add_to_cart_button:hover{
+    text-decoration: underline
+}
+.woocommerce .products .product .item-info .add_to_cart_button::after{
+    display: none
+}
+/* .single-products-section .product_type_simple.add_to_cart_button {
+	display: none !important;
+}
+ */
+.single-products-section .woocommerce .products .product .item-info {
+	margin: 0;
+	width: calc(100% - 30px);
+	padding-right: 30px;
+}
+
+.single-products-section .woocommerce .products .product .item-info .item-info-row {
+	display: flex;
+	flex-direction: column;
+}
+
+.single-products-section .yith-wcwl-add-to-wishlist-button__label {
+	display: none;
+}
+
+.single-products-section .woocommerce .products .yith-add-to-wishlist-button-block {
+	margin: 0;
+	position: absolute;
+	width: 30px;
+	right: 0;
+}
+
+.single-products-section .woocommerce .products .product .item-info .item-info-row .title-column h3 {
+	font-size: 23px;
+	line-height: 1.3;
+	font-family: "Raleway";
+}
+
+.single-products-section .woocommerce .products .product .item-info .item-info-row>.price-column {
+	padding: 0;
+}
+
+.woocommerce .products .product.catalog-layout-default .item-info .add-to-cart-and-product-categories {
+	position: static;
+}
+
+
+
+.single-products-section .product-terms > font {
+	margin: 0 0 4px 0
+}
+
+.single-products-section .product-terms a {
+	color: inherit !important;
+}
+
+.single-products-section .product-terms a::after {
+	background-color: #fff
+}
+
+.single-products-section .product-terms {
+	position: absolute;
+	font-size: 20px;
+	
+
+    padding: 30px;
+    background: rgb(0 0 0 / 50%);
+    width: 100%;
+    font-family: "Italiana", serif;
+    font-size: 40px;
+/*     transform: translatey(100%); */
+    transition: 0.3s all;
+	text-align: center;
+	color: #fff;
+	
+	display: none !important
+}
+
+
+.single-products-section .custom-quick-view{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: 0.3s all;
+    border: 0;
+    background: rgb(0 0 0 / 70%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 600;
+    transform: translatey(100%)
+}
+.single-products-section ul.products li .product-images:hover  .custom-quick-view{
+    transform: translatey(0%)
+}
+.single-products-section ul.products li .product-images:hover  .gallery-image--hoverable{
+	display: none !important
+}
+.woocommerce .products .product .item-info h3 a{
+    font-family: "Raleway", serif;
+    font-weight: 600;
+}
+
+.single-products-section .wpb_column.vc_column_container > .vc_column-inner{
+    padding: 0
+}
+.single-products-section .wpb_column.vc_column_container .products-loop{
+    padding: 0 50px
+}
+.single-products-section .wpb_column.vc_column_container .products-loop::before,
+.single-products-section .wpb_column.vc_column_container .products-loop::after{
+    content: '';
+    width: 50px;
+    height: calc(100% - 30px);
+    background: white;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0
+}
+.single-products-section .wpb_column.vc_column_container .products-loop::before{
+    right: auto;
+    left: 0;
+    z-index: 2
+}
+.single-products-section  .prd-slider-btn{
+    color: black;
+    transform: translatey(calc(-50% - 130px));
+    z-index: 4
+}
+.single-products-section  .prd-slider-btn.swiper-button-disabled{
+    display: none !important
+}
+
+
+/* Woo Commerce Shop Page Code Starts */
+.archive.woocommerce-page .products-loop .product {
+	padding: 0 !important;
+	position: static !important;
+	height: auto;
+	margin-bottom: 0 !important;
+}
+
+.archive.woocommerce-page .products-loop .product .product-images {
+	border: 2px solid #000000;
+	margin-bottom: 28px;
+}
+
+.archive.woocommerce-page .products-loop .product .product-images .image-placeholder {
+	padding-bottom: 120% !important;
+	background: #FFFFFF !important
+}
+
+.archive.woocommerce-page .products-loop .product .product-images .image-placeholder img {
+	object-fit: contain
+}
+
+
+.archive.woocommerce-page .products-loop .product .addonify-qvm-button {
+	display: none !important;
+}
+
+.archive.woocommerce-page .products-loop .product.catalog-layout-default.hover .item-info .add-to-cart-and-product-categories.show-add-to-cart .product-terms, 
+.archive.woocommerce-page .products-loop .product.catalog-layout-default:hover .item-info .add-to-cart-and-product-categories.show-add-to-cart .product-terms{
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+.archive.woocommerce-page .products-loop .product .item-info .item-info-row>.price-column .woocommerce-Price-amount{
+    font-family: "Raleway", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.archive.woocommerce-page .products-loop .product .item-info .add_to_cart_button{
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 10px;
+    color: black;
+}
+.archive.woocommerce-page .products-loop .product .item-info .add_to_cart_button:hover{
+    text-decoration: underline
+}
+.archive.woocommerce-page .products-loop .product .item-info .add_to_cart_button::after{
+    display: none
+}
+
+.archive.woocommerce-page .products-loop .product .item-info {
+	margin: 0;
+	width: calc(100% - 30px);
+	padding-right: 30px;
+}
+
+.archive.woocommerce-page .products-loop .product .item-info .item-info-row {
+	display: flex;
+	flex-direction: column;
+}
+
+.archive.woocommerce-page .products-loop .product .yith-wcwl-add-to-wishlist-button__label {
+	display: none;
+}
+
+.archive.woocommerce-page .products-loop .product .yith-add-to-wishlist-button-block {
+	margin: 0;
+	position: absolute;
+	width: 30px;
+	right: 0;
+}
+
+.archive.woocommerce-page .products-loop .product .item-info .item-info-row .title-column h3 {
+	font-size: 16px;
+	line-height: 1.3;
+	font-family: "Raleway";
+}
+
+.archive.woocommerce-page .products-loop .product .item-info .item-info-row .title-column h3 a {
+	font-size: inherit !important;
+}
+
+.archive.woocommerce-page .products-loop .product .item-info .item-info-row>.price-column {
+	padding: 0;
+}
+
+.archive.woocommerce-page .products-loop .product.catalog-layout-default .item-info .add-to-cart-and-product-categories {
+	position: static;
+}
+
+.archive.woocommerce-page .products-loop .product .product-terms a {
+	color: inherit !important;
+}
+
+.archive.woocommerce-page .products-loop .product .product-terms a::after {
+	background-color: #fff
+}
+
+/* .archive.woocommerce-page .products-loop .product .product-terms {
+	position: absolute;
+	font-size: 20px;
+    padding: 30px;
+    background: rgb(0 0 0 / 50%);
+    width: 100%;
+    font-family: "Italiana", serif;
+    font-size: 40px;
+    transition: 0.3s all;
+	text-align: center;
+	color: #fff;
+	display: none !important
+}
+ */
+
+.archive.woocommerce-page .products-loop .product .custom-quick-view {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: 0.3s all;
+    border: 0;
+    background: rgb(0 0 0 / 70%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    transform: translatey(100%)
+}
+.archive.woocommerce-page .products-loop .product .product-images:hover  .custom-quick-view{
+    transform: translatey(0%)
+}
+.archive.woocommerce-page .products-loop .product .product-images:hover  .gallery-image--hoverable{
+	display: none !important
+}
+.archive.woocommerce-page .products-loop .product .item-info h3 a{
+    font-family: "Raleway", serif;
+    font-weight: 600;
+}
+.archive.woocommerce-page .products-loop .product .product-terms {
+	display: none;;
+}
+.archive.woocommerce-page .products .product .item-info .item-info-row>.title-column {
+	flex-direction: column-reverse;
+}
+
+.archive.woocommerce-page .content-area {
+	max-width: 100%;
+	width: 100%;
+	padding: 0
+}
+
+.archive.woocommerce-page.woocommerce .products {
+	margin-left: 0;
+	margin-right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	height:  auto !important;
+}
+
+.archive.woocommerce-page.woocommerce .products::after,
+.archive.woocommerce-page.woocommerce .products::before {
+	content: none !important;
+}
+
+.archive.woocommerce-page.woocommerce .products .product {
+	float: unset !important;
+	width: calc(50% - 15px);
+	position: relative !important;
+	left: 0 !important;
+	top: 0 !important;
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--products {
+	width: 67%;
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar {
+	width: 33%;
+	padding-right: 50px
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .woocommerce.widget_layered_nav .selection .select2-selection {
+	border: 0;
+	border-bottom: 2px solid #000000 !important;
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .woocommerce.widget_layered_nav .selection .select2-selection .select2-selection__rendered {
+	padding-right: 30px
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .widgettitle,
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .woocommerce.widget_layered_nav .select2-selection__rendered,
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .woocommerce.widget_layered_nav .selection .select2-selection__placeholder {
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-family: "Raleway";
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .woocommerce.widget_layered_nav .select2-selection__clear {
+	right: 10px
+}
+
+.archive.woocommerce-page.woocommerce .select2-selection__arrow {
+	background-image: url('/wp-content/uploads/2025/02/chevron-down.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 14px;
+}
+.archive.woocommerce-page.woocommerce .select2-selection__arrow b {
+	display: none !important;
+}
+
+.archive.woocommerce-page.woocommerce .select2-results {
+	
+}
+
+.archive.woocommerce-page.woocommerce .select2-dropdown--below {
+	border: 1px solid rgba(0,0,0,0.3);
+	padding: 8px 0;
+}
+
+.archive.woocommerce-page.woocommerce .select2-dropdown--below li.select2-results__option--highlighted {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .price_slider_wrapper .price_slider {
+	background-color: rgba(0,0,0,0.3) !important
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .price_slider_wrapper .price_slider .ui-slider-handle {
+	width: 30px;
+	border-radius: 0;
+	height: 10px;
+	margin-top: -7px
+}
+
+.archive.woocommerce-page.woocommerce .products-archive--sidebar .price_slider_wrapper .price_slider .ui-slider-handle + .ui-slider-handle {
+	margin-left: -30px;
+}
+
+/* .archive.woocommerce-page .archive.woocommerce-page-header {
+	display: none !important;
+}  */
+/* Woo Commerce Shop Page code Ends */
+.woocommerce-page .site-main{
+    margin-top: 0 !important;
+}
+.woocommerce-page .site-main .products-archive{
+    max-width: 1145px;
+    margin: 0 auto;
+    padding: 0;
+}
+.woocommerce-page .site-main .woocommerce-shop-header{
+    flex-direction: column;
+    margin: 0
+}
+.woocommerce-page .woocommerce-shop-header .woocommerce-shop-header--sorting,
+.woocommerce-page .woocommerce-shop-header .woocommerce-products-header{
+    width: 100%;
+}
+.woocommerce-page .woocommerce-shop-header .woocommerce-shop-header--sorting{
+    max-width: 1145px;
+    padding: 40px 15px 15px
+}
+.woocommerce-page .woocommerce-shop-header .woocommerce-products-header{
+    display: none
+}
+
+.custom-cate-main{
+    background: #F9F4EB;
+    padding: 15px;
+    margin: 0;
+    overflow: hidden;
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.custom-cate-main .custom-category-header{
+    max-width: 500px;
+    margin-left: calc(50% - 185px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.woocommerce .onsale{
+	top: 25px !important;
+	font-size: 12px !important;
+	right: 25px !important
+}
+.custom-cate-main .custom-category-header .cate-heading{
+    margin-top: 0;
+    font-family: "Italiana" , serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.custom-cate-main .custom-category-header .cate-subtitle{
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: "Raleway" , serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.custom-cate-main .custom-category-header .cate-heading{
+    margin-top: 0;
+    font-family: "Italiana" , serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.custom-cate-main .custom-category-header .cate-subtitle{
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: "Raleway" , serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+body.post-type-archive-product .custom-cate-main .custom-category-header .cate-heading{
+    margin: 0;
+}
+
+#addonify-quick-view-modal .woocommerce .product .summary .summary-content .product_title{
+    font-family: "Raleway" , serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+#addonify-quick-view-modal .price{
+    text-align: left;
+    font-family: "Raleway" , serif;
+    font-weight: 700p !important;
+    gap: 0 !important
+}
+#addonify-quick-view-modal .price .amount *{
+    text-align: left;
+    font-family: "Raleway" , serif;
+    font-weight: 600 !important;  
+}
+#addonify-quick-view-modal .summary-content form .quantity{
+    order: 1 !important
+}
+#addonify-quick-view-modal .summary-content form .single_add_to_cart_button{
+    background-color: #F9F4EB !important;
+	border: 2px solid #000000 !important;
+	font-size: 15px;
+	letter-spacing: 2px;
+    border-radius: 0 !important;
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-weight: 500 !important;
+	padding: 8px 15px 5px !important;
+/* 	vertical-align: middle; */
+/* 	display: inline-block; */
+	font-family: "Raleway" , serif !important;
+	margin: 0 !important;
+}
+#addonify-quick-view-modal .summary-content form .single_add_to_cart_button:hover{
+     background-color: #000000 !important;
+    color: #ffffff !important;
+}
 
 @media only screen and (max-width: 1400px) {
 	.main-hero-section .main-title h1 {
@@ -419,8 +1055,28 @@ font-family: "Raleway" , serif;
 	body .simple-cta {
 		background-position: center right !important
 	}
+	.custom-cate-main .custom-category-header{
+		margin-left: 0
+	}
 }
 
+@media only screen and (max-width: 992px) {
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar {
+		padding-right: 15px;
+	}
+
+	.woocommerce .products-archive--sidebar-left .products-archive--products {
+		order: 2 !important;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .products-archive--widgets{
+		display: block !important
+	}	
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .mobile-menu{
+		display: none !important
+	}
+}
 @media only screen and (max-width: 767px) {
 	.main-hero-section .main-title h1 {
 		font-size: 50px;
@@ -500,5 +1156,81 @@ font-family: "Raleway" , serif;
 
 	.parent--main-hero-section .slider-controlls .swiper-pagination-bullet.swiper-pagination-bullet-active {
 		width: 60px;
+	}
+	
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar{
+		padding: 0px 15px 0 !important;
+		display: flex;
+		flex-direction: column-reverse;
+		background: white;
+		position: relative;
+		z-index: 100
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .mobile-menu{
+		padding: 10.5px 17px;
+		border: none;
+		border-radius: 0;
+		font-size: 15px;
+		text-align: left;
+		margin-bottom: 20px;
+		position: relative;
+		background: #eee !important
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .mobile-menu::after{
+		content: '';
+		width: 20px;
+		height: 20px;
+		background: url('/wp-content/uploads/2025/02/prd-filter-icon.svg') no-repeat center / contain;
+		position: absolute;
+		right: 15px;
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .products-archive--widgets{
+	   position: absolute;
+	   left: 50%;
+	   top: 44px;
+	   width: 100%;
+	   transform: translatex(-50%);
+	   background: white;
+	   padding: 0 15px;
+	   display: none
+	}
+	.archive.woocommerce-page.woocommerce .products-archive--sidebar .products-archive--widgets .widget_layered_nav:first-child{
+		padding-top: 20px
+	}
+	.archive.woocommerce-page .products-loop .product .custom-quick-view {
+		font-size: 16px;
+		height: 70px;
+	}
+	.custom-cate-main .custom-category-header .cate-heading{
+		font-size: 30px;
+	}
+	.custom-cate-main .custom-category-header .cate-subtitle{
+		font-size: 16px;
+	}
+	
+}
+@media only screen and (max-width: 680px) {
+    .single-products-section .wpb_column.vc_column_container .products-loop::before,
+    .single-products-section .wpb_column.vc_column_container .products-loop::after,
+    .single-products-section  .prd-slider-btn{
+        display: none
+    }
+    .single-products-section .wpb_column.vc_column_container .products-loop{
+        padding: 0 15px
+    }
+    .single-products-section .slider-controlls .slider-pagination{
+        max-width: calc(100% - 30px);
+    }
+    .woocommerce .products .product .item-info h3 a{
+        font-size: 16px;
+    }
+
+	
+	
+}
+
+@media only screen and (max-width: 480px) { 
+	.archive.woocommerce-page.woocommerce .products .product {
+		width: 100%;
 	}
 }
