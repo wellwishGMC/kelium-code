@@ -1,5 +1,15 @@
 (function ($) {
     $(document).ready(function () {
+	setTimeout(function() {
+		$('.products-archive--sidebar .select2-selection__placeholder').each(function() {
+			let text = $(this).text().trim(); // Get text and trim spaces
+			let newText = text.replace(/^Ogni\s*/, ''); // Remove "Ogni" and any following spaces
+			$(this).text(newText); // Update the element's text
+		});
+	}, 500); // Adjust the delay as needed
+
+		
+		
         if ($(".parent--main-hero-section").length) {
 
             let cs_swiper;
@@ -98,18 +108,14 @@
             },
           });
 
-          $('.products-archive--sidebar .select2-selection__placeholder').each(function() {
-            let text = $(this).text().trim(); // Get text and trim spaces
-            let newText = text.replace(/^Ogni\s*/, ''); // Remove "Ogni" and any following spaces
-            $(this).text(newText); // Update the element's text
-        });
+          
         
 // 		Add Custom Quick view button in the product
-    $('.woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images').append('<button class="custom-quick-view">Acquista</button>');
-		$('.single-products-section .product-images').append('<button class="custom-quick-view">Acquista</button>');
-		$('.single-products-section .product-images, .woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images').on('click', '.custom-quick-view', function() {
-			$(this).closest('.product.catalog-layout-default').find('.addonify-qvm-button').trigger('click');
-		});
+//     $('.woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images').append('<button class="custom-quick-view">Acquista</button>');
+// 		$('.single-products-section .product-images').append('<button class="custom-quick-view">Acquista</button>');
+		$(document).on('click', '.single-products-section .product-images, .woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images', function() {
+    $(this).closest('.product.catalog-layout-default').find('.woosq-btn').trigger('click');
+});
 		
 		$('.archive.woocommerce-page.woocommerce .products-archive--sidebar').append('<button class="mobile-menu">Filters</button>');
 		$('.products-archive--sidebar .mobile-menu').on('click', function(){

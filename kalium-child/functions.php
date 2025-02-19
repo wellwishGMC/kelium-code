@@ -134,6 +134,7 @@ function custom_html_at_start_of_shop_page() {
 }
 add_action('woocommerce_before_main_content', 'custom_html_at_start_of_shop_page', 10);
 
+// Hook to display title of shop page
 function html_at_start_of_shop_page() {
     if (is_shop()) { // Ensures it's only the Shop page
         echo '<div class="custom-cate-main">';
@@ -144,5 +145,71 @@ function html_at_start_of_shop_page() {
     }
 }
 add_action('woocommerce_before_main_content', 'html_at_start_of_shop_page', 10);
+
+// Hook to to add custom product image div in product card
+add_action('woocommerce_before_shop_loop_item_title', 'custom_add_button_inside_product_image', 10);
+
+function custom_add_button_inside_product_image() {
+    global $product;
+    $product_id = $product->get_id();
+    
+    // Get the product image URL (first image in the gallery)
+    $product_image_url = get_the_post_thumbnail_url($product_id, 'full');
+    
+    // Check if the image URL is available
+    if (!$product_image_url) {
+        // Set a default image if no product image is found
+        $product_image_url = 'path/to/default-image.jpg'; // Replace with your default image path
+    }
+    ?>
+    
+    <div class="product-images prd-img-wrapper">
+        <a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+            <span class="image-placeholder">
+                <img src="<?php echo esc_url($product_image_url); ?>" alt="<?php echo esc_attr(get_the_title($product_id)); ?>" />
+            </span>
+        </a>
+        <button class="custom-quick-view">Acquista</button>
+    </div>
+
+<?php }
+
+//Woocoommerce single
+//Add Hook for breadcrumb
+add_action('woocommerce_single_product_summary', function() {
+    if (function_exists('woocommerce_breadcrumb')) {
+        echo '<div class="breadcrumb_main-wrapper">';
+            echo '<div class="breadcrumb_Container">';
+                echo '<nav class="custom-breadcrumbs">';
+                woocommerce_breadcrumb();
+                echo '</nav>';
+            echo '</div>';
+        echo '</div>';
+    }
+}, 5);
+
+//Related products
+function display_related_products_after_single_product() {
+    echo '<div class="custom-related-prd-wrapper">';
+        echo '<div class="custom-related-prd-containerr">';
+            echo '<div class="single-products-section">';
+                echo '<div class="wpb_column vc_column_container">';
+                    echo do_shortcode('[related_products limit="6"]'); // Adjust as needed
+                echo '</div>';
+            echo '</div>';
+        echo '</div>';
+    echo '</div>';
+}
+add_action('woocommerce_after_single_product_summary', 'display_related_products_after_single_product', 15);
+
+
+// Recent products
+function display_recent_products_after_single_product() {
+    echo '<div class="news-section">';
+    echo '<h2>Latest Products</h2>';
+    echo do_shortcode('[recent_products limit="6" columns="4"]');
+    echo '</div>';
+}
+add_action('woocommerce_after_single_product', 'display_recent_products_after_single_product');
 
 
