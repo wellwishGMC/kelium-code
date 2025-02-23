@@ -174,42 +174,5 @@ function custom_add_button_inside_product_image() {
 
 <?php }
 
-//Woocoommerce single
-//Add Hook for breadcrumb
-add_action('woocommerce_single_product_summary', function() {
-    if (function_exists('woocommerce_breadcrumb')) {
-        echo '<div class="breadcrumb_main-wrapper">';
-            echo '<div class="breadcrumb_Container">';
-                echo '<nav class="custom-breadcrumbs">';
-                woocommerce_breadcrumb();
-                echo '</nav>';
-            echo '</div>';
-        echo '</div>';
-    }
-}, 5);
-
-//Related products
-function display_related_products_after_single_product() {
-    echo '<div class="custom-related-prd-wrapper">';
-        echo '<div class="custom-related-prd-containerr">';
-            echo '<div class="single-products-section">';
-                echo '<div class="wpb_column vc_column_container">';
-                    echo do_shortcode('[related_products limit="6"]'); // Adjust as needed
-                echo '</div>';
-            echo '</div>';
-        echo '</div>';
-    echo '</div>';
-}
-add_action('woocommerce_after_single_product_summary', 'display_related_products_after_single_product', 15);
-
-
-// Recent products
-function display_recent_products_after_single_product() {
-    echo '<div class="news-section">';
-    echo '<h2>Latest Products</h2>';
-    echo do_shortcode('[recent_products limit="6" columns="4"]');
-    echo '</div>';
-}
-add_action('woocommerce_after_single_product', 'display_recent_products_after_single_product');
 
 

@@ -111,27 +111,12 @@
           
         
 // 		Add Custom Quick view button in the product
-//     $('.woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images').append('<button class="custom-quick-view">Acquista</button>');
-// 		$('.single-products-section .product-images').append('<button class="custom-quick-view">Acquista</button>');
+	$(document).on('click', '.single-products-section .custom-quick-view, .products-loop .product .custom-quick-view, .tax-product_cat .products-loop .product .custom-quick-view', function(e) {
+	  e.preventDefault();
 
-// $(document).on('click', '.single-products-section .product-images, .woocommerce-shop .products-loop .product .product-images, .tax-product_cat .products-loop .product .product-images', function() {
-//     $(this).closest('.product.catalog-layout-default').find('.woosq-btn').trigger('click');
-// });
-
-$(document).on('click', '.single-products-section .custom-quick-view, .woocommerce-shop .products-loop .product .custom-quick-view, .tax-product_cat .products-loop .product .custom-quick-view', function(e) {
-  e.preventDefault(); // Prevent redirection when clicking the button
-
-  // Trigger WooCommerce Quick View button
-  $(this).closest('.product').find('.woosq-btn').trigger('click');
-  
-  // Prevent default only if the click is on the <a> or <img>, but allow the popup to work
-  // if ($(e.target).is('a') || $(e.target).is('img')) {
-  //     e.preventDefault();
-  // }
-
-  // // Trigger the Quick View popup
-  // $(this).closest('.product').find('.woosq-btn').trigger('click');
-});
+	  // Trigger WooCommerce Quick View button
+	  $(this).closest('.product').find('.woosq-btn').trigger('click');
+	});
 
 		
 		$('.archive.woocommerce-page.woocommerce .products-archive--sidebar').append('<button class="mobile-menu">Filters</button>');
@@ -139,7 +124,29 @@ $(document).on('click', '.single-products-section .custom-quick-view, .woocommer
 			$(this).toggleClass('open-mobile-sidebar')
 			$('.products-archive--sidebar .products-archive--widgets').slideToggle()
 		});
+
+    $('.popup-button').on('click', function () {
+      $(this).siblings('.prd-detail-popup-wrapper').fadeIn();
+      $('body').addClass('popup-open').removeClass('popup-close'); // Add popup-open and remove popup-close
+    });
+
+    $('.prd-detail-popup-wrapper').on('click', function (e) {
+        if ($(e.target).is('.prd-detail-popup-wrapper') || $(e.target).is('.close-popup')) {
+            $(this).fadeOut();
+            $('body').removeClass('popup-open').addClass('popup-close'); // Remove popup-open and add popup-close
+        }
+    });
 		
+	  var swiper = new Swiper(".prd-single-swiper", {
+	  slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      }
+    });
 		
     }); // Ready Ends
 })(jQuery);
